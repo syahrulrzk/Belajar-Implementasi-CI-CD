@@ -14,3 +14,33 @@ Nah, sebab itulah praktik CI/CD kini ramai diterapkan di banyak perusahaan. Prak
 Anda pun sebagai developer jangan sampai ketinggalan, ya. Anda wajib memahami CI/CD jika ingin unggul dari para developer lain di luar sana.
 
 Sebagaimana tersurat pada namanya, CI/CD terdiri dari 2 akronim: CI dan CD. Kita akan bedah satu per satu. Mari awali dengan menilik CI terlebih dahulu.
+
+## Continuous Integration (CI)
+Continuous integration (biasa disingkat CI) merupakan praktik pengembangan aplikasi/perangkat lunak di mana Developer secara teratur (atau sesering mungkin) mengunggah (push) atau menggabungkan (merge) perubahan kode (code changes) mereka ke sebuah repositori terpusat (central repository) dan/atau ke mainline trunk (seperti branch master/main), setelah itu proses pembentukan (build) dan pengujian (test) secara otomatis akan dijalankan [1].
+
+Tujuan utama dari continuous integration adalah untuk menemukan dan mengatasi bug lebih cepat, meningkatkan kualitas perangkat lunak, dan mengurangi waktu yang diperlukan untuk memvalidasi dan merilis pembaruan perangkat lunak baru.
+
+Selain itu, dengan continuous integration, developer bisa cepat menerima respons apakah kode yang mereka tulis sesuai ekspektasi atau tidak. Tak perlu lagi harus menunggu berhari-hari hanya untuk diberi tahu tim QA apakah Developer bisa lanjut mengerjakan fitur selanjutnya atau perlu berkutat memperbaiki eror.
+
+Ada beberapa kategori tools yang bisa kita manfaatkan untuk menghadirkan CI untuk aplikasi yang dibuat, antara lain sebagai berikut.
+
+- Source control version management
+Ini digunakan untuk berkomunikasi dan menyelesaikan konflik kode antara beberapa developer yang bekerja di basis kode (codebase) yang sama. Salah satu tools yang kerap digunakan dan populer adalah git. Bila Anda ingin tahu lebih dalam soal git, silakan akses kelas Belajar Dasar Git dengan GitHub.
+
+Saat menggunakan source control version management seperti git, Anda disarankan untuk melakukan perubahan sekecil mungkin dan mengintegrasikan perubahan tersebut sesering mungkin.
+
+
+- Build automation
+Dalam konteks pengembangan aplikasi, “build” mengacu pada proses yang mengubah file dan aset lainnya menjadi produk perangkat lunak dalam bentuk final atau siap di-deploy. Sementara itu, file hasil dari proses build disebut “build artifact”, umumnya termasuk package, compressed file, container image, dll.
+
+Ada serangkaian langkah yang akan dibutuhkan untuk membuat sebuah build artifact. Proses pembentukan build artifact dilakukan secara otomatis, semisal ketika developer mengunggah (push) kode ke central repository atau saat menggabungkan (merge) kode ke main branch. Banyak tools yang kerap dipakai untuk build automation, salah satunya yang ternama ialah Jenkins.
+
+
+- Automated testing
+Testing alias pengujian menjadi hal yang penting karena bertindak untuk memastikan/memvalidasi basis kode berfungsi dengan benar tanpa bug dan/atau tidak menyebabkan regresi pada fitur yang ada. Testing yang dilakukan pada tahapan CI umumnya adalah unit test.
+
+Sama seperti proses build (karena sering kali dilakukan beriringan), pengujian ini juga dilakukan secara otomatis setiap kali developer mengunggah (push) kode ke central repository atau saat menggabungkan (merge) kode ke main branch. Jika aplikasi tidak perlu di-build, proses yang dilakukan hanya testing. Karena dilakukan bersamaan, biasanya tools untuk automasi build dan test pun sama, misalnya Jenkins.
+
+Automated testing ini juga menghasilkan suatu artifact, bisa berupa test result, code coverage, dan lain sebagainya. Dengan demikian, artifact tidak hanya ada dalam proses build, melainkan juga bisa dibuat saat proses testing. Kita akan bahas lebih dalam soal ini nanti.
+
+Semoga Anda sudah paham dengan CI, intinya proses yang terintegrasi biasanya adalah building dan testing (berupa unit test). Selanjutnya, mari kita tilik apa yang dimaksud dengan CD.
