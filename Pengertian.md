@@ -1,0 +1,2 @@
+# Pengertian CI/CD
+Saat ini, sebagian besar perusahaan sudah memulai perjalanan transformasi digital mereka untuk membangun hubungan lebih erat dengan pelanggan/pengguna guna mencapai nilai bisnis yang berkelanjutan. Tak hanya itu, perusahaan-perusahaan tersebut (apa pun jenis dan skala bisnisnya) juga berkompetisi dengan pesaing mereka. Salah satu strateginya adalah memasuki market (pasar bisnis) dengan berinovasi lebih cepat daripada sebelumnya. Dengan begitu, mereka bisa memenangkan persaingan bisnis.
