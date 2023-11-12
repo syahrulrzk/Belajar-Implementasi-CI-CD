@@ -25,18 +25,21 @@ Selain itu, dengan continuous integration, developer bisa cepat menerima respons
 Ada beberapa kategori tools yang bisa kita manfaatkan untuk menghadirkan CI untuk aplikasi yang dibuat, antara lain sebagai berikut.
 
 - Source control version management
+  
 Ini digunakan untuk berkomunikasi dan menyelesaikan konflik kode antara beberapa developer yang bekerja di basis kode (codebase) yang sama. Salah satu tools yang kerap digunakan dan populer adalah git. Bila Anda ingin tahu lebih dalam soal git, silakan akses kelas Belajar Dasar Git dengan GitHub.
 
 Saat menggunakan source control version management seperti git, Anda disarankan untuk melakukan perubahan sekecil mungkin dan mengintegrasikan perubahan tersebut sesering mungkin.
 
 
 - Build automation
+  
 Dalam konteks pengembangan aplikasi, “build” mengacu pada proses yang mengubah file dan aset lainnya menjadi produk perangkat lunak dalam bentuk final atau siap di-deploy. Sementara itu, file hasil dari proses build disebut “build artifact”, umumnya termasuk package, compressed file, container image, dll.
 
 Ada serangkaian langkah yang akan dibutuhkan untuk membuat sebuah build artifact. Proses pembentukan build artifact dilakukan secara otomatis, semisal ketika developer mengunggah (push) kode ke central repository atau saat menggabungkan (merge) kode ke main branch. Banyak tools yang kerap dipakai untuk build automation, salah satunya yang ternama ialah Jenkins.
 
 
 - Automated testing
+  
 Testing alias pengujian menjadi hal yang penting karena bertindak untuk memastikan/memvalidasi basis kode berfungsi dengan benar tanpa bug dan/atau tidak menyebabkan regresi pada fitur yang ada. Testing yang dilakukan pada tahapan CI umumnya adalah unit test.
 
 Sama seperti proses build (karena sering kali dilakukan beriringan), pengujian ini juga dilakukan secara otomatis setiap kali developer mengunggah (push) kode ke central repository atau saat menggabungkan (merge) kode ke main branch. Jika aplikasi tidak perlu di-build, proses yang dilakukan hanya testing. Karena dilakukan bersamaan, biasanya tools untuk automasi build dan test pun sama, misalnya Jenkins.
