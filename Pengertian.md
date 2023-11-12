@@ -65,3 +65,10 @@ Continuous deployment berjalan satu langkah lebih jauh daripada continuous deliv
 Continuous deployment merupakan cara terbaik untuk mempercepat feedback loop (sudah kita pelajari di kelas Belajar Dasar-Dasar DevOps) dengan pengguna Anda. Selain itu, Developer bisa fokus pada pembuatan perangkat lunak, dan mereka dapat melihat pekerjaan masing-masing secara langsung hanya dalam waktu beberapa menit setelah selesai mengerjakannya. Keren, bukan?
 
 Agar praktik ini dapat diterapkan dengan baik, tim wajib membuat skenario pengujian sekomprehensif mungkin dan sekaligus memiliki kepercayaan diri tinggi dalam proses automated testing. Tujuan utamanya, selama proses build telah lulus dari automated testing maka kode akan langsung di-deploy.
+
+## CI/CD Pipeline
+Dengan istilah-istilah yang kita pelajari (continuous integration dan continuous delivery/deployment), lahirlah CI/CD Pipeline (atau DevOps Pipeline). Ia merupakan serangkaian langkah yang harus dilakukan untuk menghadirkan versi perangkat lunak yang baru. CI/CD Pipeline adalah praktik yang berfokus pada peningkatan software delivery (pengiriman perangkat lunak) di seluruh siklus pengembangan perangkat lunak (build, test, dan deploy kode) melalui automasi.
+
+Tujuan dari mengotomatisasi proses ialah untuk meminimalkan kesalahan manusia dan mempertahankan proses yang konsisten tentang bagaimana perangkat lunak disajikan ke pengguna. Tools yang disertakan dalam CI/CD pipeline dapat mencakup code compiling, unit test, code analysis, security, dan binaries creation.
+
+Fun fact! CI/CD pipeline merupakan salah satu implementasi dari prinsip-prinsip DevOps (The First Way, The Second Way, dan The Third Way) yang kita pelajari di kelas Belajar Dasar-Dasar DevOps. Itu benar karena CI/CD pipeline dapat memperbaiki alur kerja (flow), mempercepat umpan balik (feedback), dan memungkinkan Developer untuk terus bereksperimen serta belajar dari kesalahan (continual experimentation and learning).
