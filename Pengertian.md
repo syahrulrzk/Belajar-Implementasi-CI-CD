@@ -47,3 +47,21 @@ Sama seperti proses build (karena sering kali dilakukan beriringan), pengujian i
 Automated testing ini juga menghasilkan suatu artifact, bisa berupa test result, code coverage, dan lain sebagainya. Dengan demikian, artifact tidak hanya ada dalam proses build, melainkan juga bisa dibuat saat proses testing. Kita akan bahas lebih dalam soal ini nanti.
 
 Semoga Anda sudah paham dengan CI, intinya proses yang terintegrasi biasanya adalah building dan testing (berupa unit test). Selanjutnya, mari kita tilik apa yang dimaksud dengan CD.
+
+## Continuous Delivery/Deployment (CD)
+
+Bila CI berarti continuous integration, CD memiliki dua arti: continuous delivery atau continuous deployment. Ini semua tergantung pada prosesnya.
+
+Continuous delivery adalah perpanjangan dari continuous integration karena secara otomatis melakukan deploy terhadap semua perubahan kode ke testing dan/atau production environment sesaat setelah tahapan build usai dan/atau lolos test [2]. Jika diterapkan dengan benar, developer akan selalu memiliki produk build yang siap deploy yang telah melewati proses pengujian standar. 
+
+Continuous delivery menggunakan pendekatan di mana suatu persetujuan manual (manual approval) perlu dilakukan sebelum proses deploy ke production environment guna memastikan bahwa perubahan kode benar-benar siap disajikan ke pengguna. Dengan ini, Anda dapat men-deploy aplikasi kapan pun hanya dengan mengeklik suatu tombol.
+
+Secara teori, dengan continuous delivery, Anda dapat memutuskan untuk men-deploy setiap hari, setiap minggu, setiap dua minggu, atau kapan pun sesuai kebutuhan bisnis. Namun, jika Anda benar-benar ingin mendapatkan manfaat dari continuous delivery, Anda harus men-deploy ke production environment sedini mungkin untuk memastikan bahwa Anda men-deploy aplikasi dalam skala batch yang kecil sehingga mudah untuk diperbaiki jika terjadi masalah.
+
+Continuous delivery memungkinkan Developer mengotomatiskan pengujian bahkan di luar unit test saja sehingga mereka dapat memverifikasi pembaruan aplikasi di berbagai dimensi. Pengujian ini dapat mencakup UI testing, load testing, integration testing, API reliability testing, dll. Hal ini membantu Developer untuk memvalidasi pembaruan secara lebih menyeluruh sehingga mereka dapat menemukan masalah dengan cepat.
+
+Continuous deployment berjalan satu langkah lebih jauh daripada continuous delivery. Continuous deployment adalah praktik yang berupaya mengotomatiskan deployment produk dari awal hingga akhir. Dengan praktik ini, semua perubahan yang berhasil melewati setiap fase pada alur CI/CD akan langsung di-deploy ke production environment dan seketika tersaji ke pengguna. Tidak ada campur tangan manusia. Hanya pengujian yang gagal yang akan mencegah perubahan baru di-deploy ke production environment. 
+
+Continuous deployment merupakan cara terbaik untuk mempercepat feedback loop (sudah kita pelajari di kelas Belajar Dasar-Dasar DevOps) dengan pengguna Anda. Selain itu, Developer bisa fokus pada pembuatan perangkat lunak, dan mereka dapat melihat pekerjaan masing-masing secara langsung hanya dalam waktu beberapa menit setelah selesai mengerjakannya. Keren, bukan?
+
+Agar praktik ini dapat diterapkan dengan baik, tim wajib membuat skenario pengujian sekomprehensif mungkin dan sekaligus memiliki kepercayaan diri tinggi dalam proses automated testing. Tujuan utamanya, selama proses build telah lulus dari automated testing maka kode akan langsung di-deploy.
