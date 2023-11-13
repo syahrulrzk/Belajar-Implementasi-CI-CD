@@ -69,3 +69,23 @@ Build tools atau CI/CD tools memerlukan suatu mekanisme untuk mengetahui perubah
 Webhook terjadi saat ada perubahan dari git server dan kemudian mengirimkan pesan kepada build tools mengenai kejadian (event) yang terjadi pada git server tersebut. Lantas, build tools kemudian akan menanggapi sesuai dengan event yang dikirimkan. Contohnya, saat Developer melakukan commit, git server akan mengirimkan webhook ke build tools yang kemudian akan memulai proses build, test, dan deploy aplikasi.
 
 Selain melalui webhook, build tools juga dapat melakukan pooling sehingga build tools inilah yang secara aktif membandingkan/melihat perubahan yang terjadi pada git server.
+
+### Berkenalan dengan React App
+
+React App adalah aplikasi web sederhana yang menampilkan halaman web dengan konten “Welcome to React” disertai dengan test (pengujian) untuk memeriksa apakah aplikasi me-render tampilan dengan baik. Selain itu, aplikasi ini akan menggunakan Node.js sebagai JavaScript runtime environment dan npm sebagai package manager.
+
+Sebagaimana yang tadi sudah disebutkan, aplikasi React App akan berjalan di lokal. Tools yang akan kita pakai selama berinteraksi dengan React App (sekalian mengikuti alur CI/CD) adalah sebagai berikut.
+
+- Code: Visual Studio Code sebagai Code Editor dan GitHub sebagai Git hosting platform (source control version management).
+
+- Build dan Test: Jenkins sebagai tools untuk build automation, automated testing, sekaligus CI pipeline (meski bisa dimanfaatkan untuk keseluruhan proses pada CI/CD pipeline, modul ini hanya akan fokus untuk membuat CI pipeline).
+
+Masing-masing tools akan dibahas lebih detail di materi berikutnya. Namun, masih ada satu tahapan yang kurang, yaitu kita belum mendefinisikan tools untuk tahapan Plan. 
+
+- Tahapan Plan di React App
+  
+Saat kita berbicara mengenai tahapan Plan, akan erat kaitannya dengan project management tools. Ada banyak tools yang tersedia dan Anda bisa pilih sesuai kebutuhan.
+
+Salah satu yang populer dan sering dipakai untuk software development adalah Jira Software. Pasalnya, tools ini memang ditujukan untuk Agile project management yang mana mendukung dan selaras dengan prinsip-prinsip DevOps. Dengan tools tersebut, Anda bisa memanfaatkan pendekatan Agile, melalui implementasi Scrum framework dengan membuat sprint, penggunaan Kanban framework untuk membuat kanban board, dan lain sebagainya.
+
+Silakan pelajari dan pahami lebih dalam tentang Agile secara lengkap dan detail di halaman berikut ini.
