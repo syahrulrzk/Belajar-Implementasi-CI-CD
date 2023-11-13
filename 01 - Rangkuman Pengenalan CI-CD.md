@@ -37,13 +37,17 @@ Pada tahap ini, tim Developer menulis dan mengembangkan kode aplikasi dalam baha
   
 Dalam konteks pengembangan aplikasi, “build” mengacu pada proses yang mengubah file dan aset lainnya menjadi produk perangkat lunak dalam bentuk final atau siap di-deploy. Langkah-langkahnya sebagai berikut:
 
-- Meng-compile kode
-  
-Memeriksa gaya dan standar dari kode.
-Menganalisis tingkat kompleksitas dan pemeliharaan kode.
-Memvalidasi dependencies pada kode.
-Membuat sebuah artifact, seperti container image, compressed file (jar, zip, dll), installer, package, dan sebagainya.
-Menjalankan unit test.
+~ Meng-compile kode  
+
+~ Memeriksa gaya dan standar dari kode.
+
+~ Menganalisis tingkat kompleksitas dan pemeliharaan kode.
+
+~ Memvalidasi dependencies pada kode.
+
+~ Membuat sebuah artifact, seperti container image, compressed file (jar, zip, dll), installer, package, dan sebagainya.
+
+~ Menjalankan unit test.
 
 
 - Test
