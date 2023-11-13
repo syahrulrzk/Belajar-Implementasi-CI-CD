@@ -113,3 +113,17 @@ Karena kita sudah menyelesaikan proyek React App, selanjutnya kita akan fokus be
 Ada yang berbeda dengan proyek Trivia App ini. Bila sebelumnya kita berlatih di local environment (komputer pribadi) dengan tools open source seperti Jenkins, kali ini kita akan menggunakan cloud provider ternama, yakni Amazon Web Services alias AWS.
 
 Sebagaimana namanya, Trivia App adalah sebuah aplikasi permainan/kuis trivia yang akan memberikan 10 pertanyaan menarik. Pertanyaan yang disajikan adalah seputar ilmu geografi sederhana, yakni berkenaan dengan nama ibu kota dari suatu negara. Simpel nan mengasyikkan, bukan?
+
+### Continuous Integration di AWS
+Fokus dari materi kali ini adalah membahas tools-tools yang akan kita pakai untuk membuat CI pipeline menggunakan beberapa layanan AWS, terutama untuk bagian Code, Build, dan Test.
+
+Berikut beberapa layanan AWS yang akan digunakan untuk membuat CI Pipeline di kelas ini.
+
+- Code: AWS Cloud9 sebagai cloud-based IDE dan AWS CodeCommit sebagai managed source control service untuk meng-hosting (menyimpan dan mengelola) private Git repositories.
+
+- Build dan Test: AWS CodeBuild sebagai fully managed build service untuk meng-compile source code, menjalankan test, dan memproduksi software packages. 
+
+- CI Pipeline: AWS CodePipeline sebagai fully managed CI/CD Pipeline service untuk membantu mengotomatiskan proses continuous integration dan continuous delivery/deployment aplikasi (meski bisa dimanfaatkan untuk keseluruhan proses pada CI/CD pipeline, modul ini hanya akan fokus untuk membuat CI pipeline).
+
+Supaya lebih jelas, mari kita bahas setiap layanan satu per satu berdasarkan kategorinya, yakni Code, Build, dan Test.
+
