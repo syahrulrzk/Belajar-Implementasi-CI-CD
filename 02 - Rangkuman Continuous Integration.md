@@ -105,3 +105,11 @@ GitHub adalah perusahaan yang menawarkan layanan Git repository hosting berbasis
 Jenkins adalah tools otomatisasi open source yang dapat digunakan untuk mengotomatisasi semua jenis pekerjaan terkait building, testing, dan delivering/deploying perangkat lunak. 
 
 Jenkins dapat diinstal di berbagai sistem operasi (Windows, Linux, macOS, FreeBSD, dll) melalui native package, Docker, Kubernetes, atau dijalankan secara mandiri (standalone) oleh mesin apa pun dengan WAR (Web application Archive) files.
+
+### Berkenalan dengan Trivia App
+
+Karena kita sudah menyelesaikan proyek React App, selanjutnya kita akan fokus berkenalan dengan Trivia App.
+
+Ada yang berbeda dengan proyek Trivia App ini. Bila sebelumnya kita berlatih di local environment (komputer pribadi) dengan tools open source seperti Jenkins, kali ini kita akan menggunakan cloud provider ternama, yakni Amazon Web Services alias AWS.
+
+Sebagaimana namanya, Trivia App adalah sebuah aplikasi permainan/kuis trivia yang akan memberikan 10 pertanyaan menarik. Pertanyaan yang disajikan adalah seputar ilmu geografi sederhana, yakni berkenaan dengan nama ibu kota dari suatu negara. Simpel nan mengasyikkan, bukan?
