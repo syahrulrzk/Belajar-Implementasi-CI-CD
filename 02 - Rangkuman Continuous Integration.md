@@ -65,3 +65,7 @@ Pastikan Anda benar-benar paham sebelum lanjut ke materi berikutnya.
 ### Hubungan Git dengan CI/CD
 
 Build tools atau CI/CD tools memerlukan suatu mekanisme untuk mengetahui perubahan dari git server. Ada beberapa mekanisme yang sering digunakan, salah satunya melalui webhook dan pooling (cron).
+
+Webhook terjadi saat ada perubahan dari git server dan kemudian mengirimkan pesan kepada build tools mengenai kejadian (event) yang terjadi pada git server tersebut. Lantas, build tools kemudian akan menanggapi sesuai dengan event yang dikirimkan. Contohnya, saat Developer melakukan commit, git server akan mengirimkan webhook ke build tools yang kemudian akan memulai proses build, test, dan deploy aplikasi.
+
+Selain melalui webhook, build tools juga dapat melakukan pooling sehingga build tools inilah yang secara aktif membandingkan/melihat perubahan yang terjadi pada git server.
