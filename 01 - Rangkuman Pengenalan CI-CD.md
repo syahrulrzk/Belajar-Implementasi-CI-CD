@@ -69,3 +69,22 @@ Pada tahap ini, aplikasi (atau perubahan kode) sudah di-deploy dan bisa diakses 
 - Monitor
   
 Fase “terakhir” dari siklus DevOps adalah memantau (monitor) environment. Tahap ini dibangun berdasarkan feedback pengguna yang diberikan dalam fase Operate dengan mengumpulkan data dan analitik tentang perilaku pengguna, kinerja, bug, dan lainnya. 
+
+## Manfaat Implementasi CI/CD
+Continuous integration dan continuous delivery/deployment telah memungkinkan banyak perusahaan untuk men-deploy perubahan kode lebih sering tanpa mengurangi kualitas. Dengan CI/CD, perubahan kode dipandu melalui automated pipeline yang menangani tugas build, test, dan deploy yang repetitif serta memperingatkan Anda jika terjadi suatu masalah. 
+
+Selain itu, masih banyak manfaat-manfaat lain yang akan didapatkan jika Anda mengimplementasikan praktik CI/CD, antara lain:
+
+- Membuat proses delivery ke production menjadi lebih cepat.
+- Mengurangi risiko dengan pengujian yang komprehensif.
+- Memastikan semua fitur berjalan lancar setiap kali terjadi perubahan kode (push atau merge).
+- Mendeteksi error atau bug secepat mungkin sehingga bisa segera ditangani.
+- Membuat perpindahan dari satu fase ke fase lain menjadi lebih mudah.
+- Mengurangi proses testing secara manual yang bisa jadi terlupakan karena human-factor.
+- Memberikan Developer suatu feedback atau respons sesegera mungkin tentang kode yang mereka tulis.
+- Menciptakan lingkungan yang kolaboratif karena melibatkan banyak pihak ke dalam CI/CD pipeline.
+- Untuk Anda yang memanfaatkan branch, CI bisa memastikan branch utama (production) tetap bersih dan bisa dijalankan kapan saja.
+- Menyimpan arsip build terakhir kali yang sukses sehingga apabila terjadi kesalahan Anda bisa kembali ke versi kode sebelumnya.
+- Memaksimalkan kreativitas musabab setiap orang bisa memiliki lebih banyak waktu untuk berinovasi.
+  
+Telah Anda simak bahwa manfaat dari implementasi CI/CD ada banyak sekali, mulai dari pertimbangan praktis seperti kualitas kode dan perbaikan bug yang cepat, hingga memastikan bahwa Anda telah membangun hal yang tepat untuk pengguna sekaligus meningkatkan/memperbaiki seluruh proses pada alur pengembangan aplikasi. 
