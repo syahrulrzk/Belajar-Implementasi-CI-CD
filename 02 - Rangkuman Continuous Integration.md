@@ -88,4 +88,20 @@ Saat kita berbicara mengenai tahapan Plan, akan erat kaitannya dengan project ma
 
 Salah satu yang populer dan sering dipakai untuk software development adalah Jira Software. Pasalnya, tools ini memang ditujukan untuk Agile project management yang mana mendukung dan selaras dengan prinsip-prinsip DevOps. Dengan tools tersebut, Anda bisa memanfaatkan pendekatan Agile, melalui implementasi Scrum framework dengan membuat sprint, penggunaan Kanban framework untuk membuat kanban board, dan lain sebagainya.
 
-Silakan pelajari dan pahami lebih dalam tentang Agile secara lengkap dan detail di halaman berikut ini.
+### Continuous Integration dengan GitHub dan Jenkins
+
+Secara umum, continuous integration memiliki alur mulai dari Plan, Code, Build, hingga Test. Untuk tahapan Plan, kita sudah membahas tools yang digunakan–yakni salah satunya dengan Jira Software–sekaligus mengenal kriteria dari aplikasi React App. Akan tetapi, kita belum dalami bagian Code, Build, dan Test. 
+
+Kita baru menyebutkan bahwa untuk tahapan Code, tools yang dipakai di kelas ini adalah Visual Studio Code sebagai Code Editor dan GitHub sebagai Git hosting platform. Sementara itu, untuk fase Build dan Test, kita akan menggunakan Jenkins sebagai tools untuk build automation, automated testing, sekaligus CI pipeline.
+
+Nah, sebelum praktik menggunakan tools-tools tersebut, di modul ini kita akan bahas masing-masing tools secara lebih mendalam. Mari kita mulai.
+
+ - GitHub
+   
+GitHub adalah perusahaan yang menawarkan layanan Git repository hosting berbasis cloud. GitHub membuat para pengguna baik individu maupun tim menjadi lebih mudah untuk menggunakan git dalam mengontrol versi suatu pekerjaan (kode pemrograman, dokumen, dsb) saat melakukan kolaborasi dalam atau antar tim.
+
+- Jenkins
+  
+Jenkins adalah tools otomatisasi open source yang dapat digunakan untuk mengotomatisasi semua jenis pekerjaan terkait building, testing, dan delivering/deploying perangkat lunak. 
+
+Jenkins dapat diinstal di berbagai sistem operasi (Windows, Linux, macOS, FreeBSD, dll) melalui native package, Docker, Kubernetes, atau dijalankan secara mandiri (standalone) oleh mesin apa pun dengan WAR (Web application Archive) files.
