@@ -127,3 +127,61 @@ Berikut beberapa layanan AWS yang akan digunakan untuk membuat CI Pipeline di ke
 
 Supaya lebih jelas, mari kita bahas setiap layanan satu per satu berdasarkan kategorinya, yakni Code, Build, dan Test.
 
+### Continuous Integration di AWS: Code
+
+Apabila pada proyek React App kita memakai Visual Studio Code dan GitHub, untuk proyek Trivia App di AWS, kita akan menggunakan AWS Cloud9 dan AWS CodeCommit.
+
+- AWS Cloud9
+  
+Pada dasarnya, AWS Cloud9 adalah sebuah IDE atau integrated development environment berbasis cloud (bisa diakses kapan saja dan di mana saja melalui web browser). AWS Cloud9 membuat kolaborasi menjadi mudah. Anda dapat membagikan environment dengan orang lain untuk memungkinkan pair programming. Dengan begitu, anggota tim dapat saling melihat isi kode dan bersamaan melakukan coding secara real time. 
+
+AWS Cloud9 sangat terintegrasi dengan AWS CodeCommit (mengingat keduanya adalah sama-sama layanan dari AWS) sehingga semakin memudahkan pekerjaan Developer.
+
+- AWS CodeCommit
+  
+AWS CodeCommit adalah managed source control service (atau bisa juga disebut version control service) yang dapat digunakan untuk meng-hosting (menyimpan dan mengelola) private git repository (repository yang bersifat private). Kerennya, AWS CodeCommit mendukung semua fungsi standar yang ada pada git. Jadi, bila Anda familier dengan git repository, niscaya Anda juga akan terbiasa dengan AWS CodeCommit. 
+
+Semoga Anda sudah paham dengan tools yang akan kita gunakan pada tahapan Code dari alur CI/CD aplikasi Trivia App.
+
+
+
+### Continuous Integration di AWS: Build
+
+Kita tahu bahwa proses dari build adalah mengambil kode (pull the code), mengompilasinya (compiling), dan menginstal dependencies package dari repository (seperti npm modules atau Java Maven artifact). Output dari proses build akan menjadi sebuah packaged artifact yang siap untuk deployment, bisa jadi Linux RPM package, Java WAR file, Docker image, Windows MSI installer, atau banyak lainnya. Package tersebut kemudian dapat diteruskan ke proses deployment untuk meluncurkan pembaruan aplikasi. 
+
+Proses build umumnya juga menyertakan automated testing (pengujian otomatis) untuk memeriksa kualitas kode dan memastikan bahwa kode berjalan sesuai harapan, salah satunya adalah melalui unit test. Kita akan berbicara lebih banyak soal pengujian (test) nanti. 
+
+Di AWS, terdapat layanan yang dapat membantu kita dalam urusan build sehingga memungkinkan continuous integration, ia adalah AWS CodeBuild. Layanan ini memungkinkan kita untuk meng-compile kode, menjalankan test, dan membuat deployment packages.
+
+AWS CodeBuild adalah sebuah service alias layanan. Tak seperti mengelola proses build sendiri di local development environment, AWS CodeBuild memiliki skalabilitas yang baik sehingga dapat menjalankan beberapa proses build sekaligus. Itu artinya, ia tak akan membiarkan proses build Anda dalam antrean.
+
+
+
+### Continuous Integration di AWS: Test
+
+Jika kita ingin menerapkan CI/CD, jangan lupakan tentang testing (pengujian). Testing perlu diterapkan di berbagai tahapan dalam proses pengembangan aplikasi untuk menciptakan measure of quality (mengukur kualitas kode) pada setiap aspek aplikasi.
+
+Ada beberapa jenis pengujian yang bisa Anda praktikkan, seperti regression test, integration test, dan unit test.
+
+- Regression test: Jenis pengujian yang memeriksa/menguji setiap komponen aplikasi yang ada tidak rusak dengan adanya perubahan atau fitur baru. Misalnya, ketika Anda menambahkan fitur pembelian, pastikan bahwa fitur riwayat stok tidak bermasalah.
+
+- Integration test: Jenis pengujian ini menguji beberapa modul yang saling berkaitan. Misal pada Trivia App, apakah permain berhasil berjalan? Apakah aplikasi dapat menampilkan jumlah pemain dengan benar? Apakah pertanyaan dikirim ke setiap pemain? Apakah skor dihitung dengan tepat? Semua rangkaian aspek-aspek tersebut diuji dalam satu kesatuan.
+
+- Unit test: Jenis pengujian ini menguji fungsionalitas secara terpisah (satu unit, bukan menjadi satu kesatuan). Misal pada Trivia App, apakah skor dihitung dengan tepat?
+
+Semoga kini Anda sudah paham ya soal testing.
+
+
+
+### Continuous Integration di AWS: CI Pipeline
+
+Setiap fase (Code, Build, dan Test) yang kita lakukan pada Trivia App masih manual. Lantas, bagaimana jika kita ingin menjalankan semuanya secara otomatis setiap kali commit kode? Jelas bahwa automasi diperlukan supaya kita bisa selalu menerima feedback (umpan balik) secara langsung yang menyatakan bahwa kode yang di-commit berfungsi dengan baik (kunci dari CI/CD).
+
+Idealnya, kita memerlukan semacam workflow (alur kerja) sekaligus orchestrator (pengatur) yang dapat mengontrol setiap tahapan pada proses pengembangan aplikasi alias pipeline. Sebenarnya, ada banyak layanan yang dapat digunakan untuk mengatur langkah-langkah pada pipeline, tetapi yang akan kita bicarakan saat ini adalah AWS CodePipeline. 
+
+AWS CodePipeline memungkinkan kita untuk membuat serangkaian langkah atau tahapan untuk mengimplementasikan CI/CD Pipeline. Dalam kasus Trivia App, kita ingin agar setiap kali Developer meng-commit perubahan kode ke repository akan secara otomatis memulai tahapan lain, yakni menjalankan test. 
+
+AWS CodePipeline tidak melakukan semua ini sendirian. Seperti yang tadi disebutkan, ia adalah sebuah orchestrator. AWS CodePipeline bekerja sama dengan layanan AWS lain, seperti AWS CodeCommit (Code), AWS CodeBuild (Build & Test), dan AWS CodeDeploy (Deploy–nanti kita bahas) untuk menciptakan sebuah CI/CD Pipeline yang harmoni.
+
+Menggunakan orchestrator seperti AWS CodePipeline penting bagi Anda yang ingin menerapkan DevOps. Musabab, ia dapat meningkatkan kecepatan dan kualitas pada pembaruan atau fitur aplikasi yang dikirim ke pengguna.
+
